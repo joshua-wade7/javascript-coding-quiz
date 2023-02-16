@@ -16,9 +16,20 @@
 
   <body>
     <main class="container">
-      <section>
-        <section>
-          <section></section>
+      <!-- this is the start quiz page, only the heading and start quiz button should be visible upon page load.  -->
+      <section class="start-quiz hide">
+        <h1 class="questions">Here are where my questions will appear</h1>
+        <input type="button" class="startgame" id="positioning" />
+        <!-- this is the play game page - needs to be hidden upon page load and transition to appear when start quiz button is clicked, and transition to next questions when an answer button is pressed. -->
+        <section class="play-game hide">
+          <form>
+            <input type="button" id="button1" value="Option 1" />
+            <input type="button" id="button2" value="Option 2" />
+            <input type="button" id="button3" value="Option 3" />
+            <input type="button" id="button4" value="Option 4" />
+          </form>
+          <!-- the section below will be the results page of wins and loses / high scores. -->
+          <section class="score-page hide"></section>
         </section>
       </section>
       <script src="./assets/css/script.js"></script>

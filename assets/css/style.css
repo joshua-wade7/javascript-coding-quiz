@@ -3,4 +3,39 @@
   margin: 0;
   padding: 0;
   font-family: "Merriweather", serif;
+  background-color: rgb(255, 255, 246);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+form {
+  margin-left: 35%;
+}
+
+#positioning {
+  margin-left: 45%;
+}
+
+input {
+  border: none;
+  background: rgb(58, 58, 197);
+  color: rgb(243, 243, 245);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input:hover {
+  background-color: rgb(103, 103, 207);
 }

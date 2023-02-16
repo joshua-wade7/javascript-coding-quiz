@@ -28,5 +28,10 @@ When we click the start button, we want the quiz to begin.
 - this process should continue for 5 questions and then terminate.
 
 IF the user selects the wrong answer, the time remaining will be decreased.
+
 IF the time reaches 0 before the final question is answered, the user should be taken to the end game screen
-(end game screen)
+(end game screen should display number of questions answered correctly vs incorrectly i.e. "You answered 2 out of 5 questions correctly.  your score is: ")
+
+The user should then have a textarea to enter their initials and a submit button (event listener) to append those results to the high scores page
+
+After clicking submit, the user should be taken to a results page displaying all the high scores they have recorded - this page should be able to be accessed at any time via the "View High Scores" button at the top left of the webpage (Need to grab from local storage (getItem) and set item from local storage (setItem) to the high scores page. )

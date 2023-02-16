@@ -1,0 +1,32 @@
+We are setting up a coding quiz
+
+Acceptance Criteria:
+
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and score
+
+
+Variables (add to them as you think of them)
+
+Process:
+
+When we click the start button, we want the quiz to begin.  
+1. There needs to be a page shift from the load page to the first quiz question
+2. The timer needs to begin counting down from (80 seconds?)
+3. The questions needs to be displayed in the h1 element of the start-quiz section element
+4. There needs to be 4 multiple choice answers given to the user to select from (event listeners need to be on those buttons AND the answer options need to be displayed on the buttons)
+5. when the user clicks on their answer, the page should shift to the next question and display beneath them "right" or "wrong"
+- this process should continue for 5 questions and then terminate.
+
+IF the user selects the wrong answer, the time remaining will be decreased.
+IF the time reaches 0 before the final question is answered, the user should be taken to the end game screen
+(end game screen)

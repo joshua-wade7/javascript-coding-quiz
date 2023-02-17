@@ -25,9 +25,10 @@ h3 {
   margin-right: 5%;
 }
 
-form {
+/* no longer using the form element */
+/* form {
   margin-left: 35%;
-}
+} */
 
 #positioning {
   margin-left: 47%;

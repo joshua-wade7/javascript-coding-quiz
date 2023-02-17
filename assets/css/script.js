@@ -66,7 +66,7 @@ function startGame() {
   timer = 80;
   questionCounter = 0;
   questionsAsked = questions[questionCounter];
-  console.log(questionsAsked);
+  // console.log(questionsAsked);
   displayQuestion.textContent = questionsAsked.title;
 
   startSection.classList.add("hide");
@@ -104,8 +104,17 @@ function answerClick(event) {
     nextQuestion(); //will be similar to startGame() minus line 78
   }
   // console.log(userInput);
+  // console.log(answerClick());
 }
 
+function nextQuestion() {
+  timer = "";
+  questionsAsked = questions[questionCounter];
+  displayQuestion.textContent = questionsAsked.title; //How do I get the second question to display here?
+  console.log(questionsAsked.title);
+}
+
+function endGame() {}
 // function playGame() {}
 
 // function timer() {}

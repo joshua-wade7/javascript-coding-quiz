@@ -1,19 +1,22 @@
 //Variable Declarations
 //Create my object of quiz questions first and then move on to other variables.
 
-var questions = {
-  title1:
-    "When attaching an event listener to a submission form, which event listener would you use to capture the users input?",
+var questions = [
+  {
+    title:
+      "When attaching an event listener to a submission form, which event listener would you use to capture the users input?",
 
-  choices1: ["Click", "Hover", "Submit", "Keypress"],
+    choices: ["Click", "Hover", "Submit", "Keypress"],
 
-  answer1: "Submit",
+    answer: "Submit",
+  },
+  {
+    title: "What type of property is to the left of '.' in dot notation?",
 
-  title2: "What type of property is to the left of '.' in dot notation?",
+    choices: ["Array", "Object", "Method", "Function"],
 
-  choices2: ["Array", "Object", "Method", "Function"],
-
-  answer2: "Object",
+    answer: "Object",
+  },
 
   // title3:
 
@@ -32,7 +35,7 @@ var questions = {
   // choices5:
 
   // answer5:
-};
+];
 
 // console.log(questions.choices2[3]);
 
@@ -43,31 +46,64 @@ var secondBtn = document.querySelector("#button2");
 var thirdBtn = document.querySelector("#button3");
 var fourthBtn = document.querySelector("#button4");
 var timeRemaing = document.querySelector(".timer");
+var startSection = document.querySelector(".start-quiz");
+var playSection = document.querySelector(".play-game");
+var scoreSection = document.querySelector(".score-page");
+// var questionAsked = [];
+// var userChoice = [];
 
-var questionAsked = [];
-var userChoice = [];
-
-var questionCounter = "";
-var correctCount = 0;
-var incorrectCount = 0;
+var questionCounter = 0;
+// var correctCount = 0;
+// var incorrectCount = 0;
 var timer = 80;
-var incMessage;
-var corMessage;
+// var incMessage;
+// var corMessage;
 
 //add functions here.
 // function init() {}
 
 function startGame() {
   timer = 80;
-  var correctAnswer = questions.answer1; //pretty sure we want this in the playGame() but cannot seem to think of what to place here instead.  Will update later.
-  if (userChoice === correctAnswer);
-  {
-    corMessage.textContent = "Correct!";
-    // } else {
-    //     incMessage.textContent = "Incorrect";
-    //     timer--;
-    // };
+  questionCounter = 0;
+  questionsAsked = questions[questionCounter];
+  console.log(questionsAsked);
+  displayQuestion.textContent = questionsAsked.title;
+
+  startSection.classList.add("hide");
+
+  playSection.classList.remove("hide");
+
+  for (var i = 0; i < questionsAsked.choices.length; i++) {
+    var btn = document.getElementById(i);
+    btn.addEventListener("click", answerClick);
+    btn.textContent = questionsAsked.choices[i];
   }
+
+  // var correctAnswer = questions.answer1; //pretty sure we want this in the playGame() but cannot seem to think of what to place here instead.  Will update later.
+  // if (userChoice === correctAnswer);
+  // {
+  //   corMessage.textContent = "Correct!";
+  // } else {
+  //     incMessage.textContent = "Incorrect";
+  //     timer--;
+  // };
+  // }
+}
+function answerClick(event) {
+  var userInput = event.target.textContent;
+  if (userInput === questionsAsked.answer) {
+    console.log("Correct!");
+  } else {
+    console.log("Wrong");
+    timer -= 10;
+  }
+  questionCounter++;
+  if (questionCounter === questions.length) {
+    endGame(); //just console.log for now.
+  } else {
+    nextQuestion(); //will be similar to startGame() minus line 78
+  }
+  // console.log(userInput);
 }
 
 // function playGame() {}
@@ -77,7 +113,4 @@ function startGame() {
 // function score() {}
 
 //add event listeners down here.
-startBtn.addEventListener("click", function () {
-  questionsAsked = questions.title1;
-  displayQuestion.textContent = questionsAsked;
-});
+startBtn.addEventListener("click", startGame);

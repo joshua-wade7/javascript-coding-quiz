@@ -22,20 +22,26 @@
     <main class="container">
       <!-- this is the start quiz page, only the heading and start quiz button should be visible upon page load.  -->
       <section class="start-quiz">
-        <h1 class="questions">Here are where my questions will appear</h1>
-        <input type="button" class="startgame" id="positioning" />
+        <h1>Here are where my questions will appear</h1>
+        <button class="startgame style" id="positioning">Start</button>
+        <!-- <input type="button" class="startgame" id="positioning" /> -->
         <!-- this is the play game page - needs to be hidden upon page load and transition to appear when start quiz button is clicked, and transition to next questions when an answer button is pressed. -->
-        <section class="play-game hide">
-          <form>
-            <input type="button" id="button1" value="1. " />
-            <input type="button" id="button2" value="2. " />
-            <input type="button" id="button3" value="3. " />
-            <input type="button" id="button4" value="4. " />
-          </form>
-          <!-- the section below will be the results page of wins and loses / high scores. -->
-          <section class="score-page hide"></section>
-        </section>
       </section>
+      <section class="play-game hide">
+        <h1 class="questions">question</h1>
+        <button class="ansbtn" id="0">0</button>
+        <button class="ansbtn" id="1">1</button>
+        <button class="ansbtn" id="2">2</button>
+        <button class="ansbtn" id="3">3</button>
+        <!-- <form>
+            <input type="button" id="1" value="1. " />
+            <input type="button" id="2" value="2. " />
+            <input type="button" id="3" value="3. " />
+            <input type="button" id="4" value="4. " />
+          </form> -->
+        <!-- the section below will be the results page of wins and loses / high scores. -->
+      </section>
+      <section class="score-page hide"></section>
       <script src="./assets/css/script.js"></script>
     </main>
   </body>

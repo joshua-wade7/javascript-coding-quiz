@@ -30,10 +30,7 @@ form {
 }
 
 #positioning {
-  margin-left: 45%;
-}
-
-input {
+  margin-left: 47%;
   border: none;
   background: rgb(58, 58, 197);
   color: rgb(243, 243, 245);
@@ -42,16 +39,51 @@ input {
   text-decoration: none;
   display: block;
   font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 5px;
 }
 
-input:hover {
+.ansbtn {
+  border: none;
+  background: rgb(58, 58, 197);
+  color: rgb(243, 243, 245);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 10px;
+  margin-left: 30%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ansbtn:hover {
   background-color: rgb(103, 103, 207);
 }
 
 .hide {
   display: none;
 }
+
+/* .style {
+  background: rgb(58, 58, 197);
+  color: rgb(243, 243, 245);
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(58, 58, 197);
+  color: rgb(243, 243, 245);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 10px;
+  margin-left: 30%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+} */

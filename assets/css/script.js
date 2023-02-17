@@ -133,12 +133,29 @@ function nextQuestion() {
   answerClick();
 }
 
-function endGame() {}
-// function playGame() {}
+function endGame() {} //need to think through how the logic of this function would be stated JS lingo.
 
-// function timer() {}
+//Code listed below did not fire off the timer, what is not being targeted here that needs to be?
+// function timer() {
+//   var timerInterval = setInterval(function () {
+//     timer--;
+//     timeRemaining.textContent = timer;
+//     if (timer === 0);
+//     {
+//       clearInterval(timerInterval);
+//       sendTime();
+//       console.log(timerInterval);
+//       sendTime();
+//     }
+//   }, 1000);
+// }
 
-// function score() {}
+// function sendTime() {
+//   timeRemaining.textContent = "";
+// }
 
 //add event listeners down here.
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", startGame, timer);
+
+// function playGame() {}
+// function score() {}

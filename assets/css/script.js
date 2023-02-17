@@ -11,30 +11,39 @@ var questions = [
     answer: "Submit",
   },
   {
-    title: "What type of property is to the left of '.' in dot notation?",
+    title: "What type of property is to the left of the '.' in dot notation?",
 
     choices: ["Array", "Object", "Method", "Function"],
 
     answer: "Object",
   },
+  {
+    title: "What is the first step within DOM manipulation?",
 
-  // title3:
+    choices: [
+      "Create an Element",
+      "Append to Page",
+      "Capture User Input",
+      "TextContent",
+    ],
 
-  // choices3:
+    answer: "Create an Element",
+  },
+  {
+    title: "How do we capture the users input within JavaScript?",
 
-  // answer3:
+    choices: [".getItem()", ".add()", ".value", ".setAttribute()"],
 
-  // title4:
+    answer: ".value",
+  },
+  {
+    title:
+      "In this sequence of values '17', 'A', R, 3, which one will return a number when logged to the console?",
 
-  // choices4:
+    choices: ["17", "A", "R", "3"],
 
-  // answer4:
-
-  // title5:
-
-  // choices5:
-
-  // answer5:
+    answer: "3",
+  },
 ];
 
 // console.log(questions.choices2[3]);
@@ -92,9 +101,9 @@ function startGame() {
 function answerClick(event) {
   var userInput = event.target.textContent;
   if (userInput === questionsAsked.answer) {
-    console.log("Correct!");
+    console.log("Correct!"); //Need to figure out how to append this message to the page?
   } else {
-    console.log("Wrong");
+    console.log("Wrong!");
     timer -= 10;
   }
   questionCounter++;
@@ -110,8 +119,18 @@ function answerClick(event) {
 function nextQuestion() {
   timer = "";
   questionsAsked = questions[questionCounter];
-  displayQuestion.textContent = questionsAsked.title; //How do I get the second question to display here?
-  console.log(questionsAsked.title);
+  displayQuestion.textContent = questionsAsked.title; //How do I get the second question to display here? -> GOT IT!!
+  // console.log(questionsAsked.title);
+  // btn.textContent = questionsAsked.choices[i];
+
+  for (var i = 0; i < questionsAsked.choices.length; i++) {
+    var btn = document.getElementById(i);
+    btn.addEventListener("click", answerClick);
+    btn.textContent = questionsAsked.choices[i];
+  }
+
+  // console.log(questionsAsked.choices[i]);
+  answerClick();
 }
 
 function endGame() {}
